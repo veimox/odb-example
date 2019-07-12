@@ -56,7 +56,7 @@ include_directories(
 
 ## Declare the executable
 file(GLOB_RECURSE LIBRARY_SRC src/*.cpp)
-add_executable(${PROJECT_NAME}
+add_library(${PROJECT_NAME}
   ${LIBRARY_SRC}
   ${ODB_OUTPUT}
 )
