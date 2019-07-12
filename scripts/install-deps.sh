@@ -1,0 +1,1 @@
+apt install -y -qq git cmake odb build-essential libboost-dev libmysql++-dev
