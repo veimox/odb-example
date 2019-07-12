@@ -1,0 +1,32 @@
+# ODB
+*.sql
+-.s
+
+# Python
+*.pyc
+
+# Documentation
+doc/html
+doc/manifest.yaml
+doc/api
+doc/doxyoutput
+
+# Autosaved files
+*~
+*.bak
+*.autosave
+
+# IDE
+*.idea
+*.sublime-*
+*.vscode
+*.kdev4*
+*.config
+*.creator*
+*.files
+*.includes
+
+# Additional files
+*.fuse*
+.directory
+

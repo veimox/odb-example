@@ -1,0 +1,30 @@
+<changelog xmlns="http://www.codesynthesis.com/xmlns/odb/changelog" database="mysql" version="1">
+  <changeset version="2">
+    <add-table name="usersetttings" options="ENGINE=InnoDB" kind="object">
+      <column name="id" type="INT UNSIGNED" null="false"/>
+      <column name="language" type="VARCHAR(255)" null="true"/>
+      <column name="font_size" type="VARCHAR(255)" null="true"/>
+      <column name="color_scheme" type="VARCHAR(255)" null="true"/>
+      <primary-key auto="true">
+        <column name="id"/>
+      </primary-key>
+    </add-table>
+    <add-table name="user" options="ENGINE=InnoDB" kind="object">
+      <column name="id" type="INT UNSIGNED" null="false"/>
+      <column name="name" type="VARCHAR(4096)" null="false"/>
+      <column name="message" type="VARCHAR(4096)" null="false"/>
+      <column name="user_settings" type="INT UNSIGNED" null="false"/>
+      <primary-key auto="true">
+        <column name="id"/>
+      </primary-key>
+      <foreign-key name="user_user_settings_fk" on-delete="CASCADE">
+        <column name="user_settings"/>
+        <references table="usersetttings">
+          <column name="id"/>
+        </references>
+      </foreign-key>
+    </add-table>
+  </changeset>
+
+  <model version="1"/>
+</changelog>
