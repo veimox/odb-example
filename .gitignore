@@ -25,6 +25,7 @@ doc/doxyoutput
 *.creator*
 *.files
 *.includes
+*.user
 
 # Additional files
 *.fuse*
